@@ -75,7 +75,7 @@ span {
   border: dashed 3px black;
 }
 .container {
-  max-width: 950px;
+  max-width: 100%;
   display: grid;
 }
 
@@ -94,6 +94,17 @@ span {
   border: solid 2px yellow;
 }
 
+.grid-template-columns-rows {
+  display: grid;
+  /* grid-template-columns: auto 250px auto auto; */
+  /* grid-template-columns: repeat(3, 300px); */
+  /* grid-template-rows: auto; */
+  /* grid-template-rows: repeat(2, 200px); */
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 2fr 3fr;
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* grid-template-rows: repeat(3, 2fr); */
+}
 /* ------------------- */
 
 /* Display Grid */
