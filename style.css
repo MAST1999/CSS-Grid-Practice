@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -78,6 +78,18 @@ span {
   max-width: 100%;
   display: grid;
 }
+.grid.item-7 {
+  background-color: gray;
+  border: dashed 3px black;
+}
+.grid.item-8 {
+  background-color: royalblue;
+  border: dashed 3px red;
+}
+.grid.item-9 {
+  background-color: red;
+  border: dashed 3px black;
+}
 
 /* --------------------- */
 .container h2 {
@@ -128,3 +140,86 @@ span {
 (Grid Items) */
 
 /* ---------------------- */
+
+/* Grid Template Areas */
+.grid-template-areas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar header header header"
+    "sidebar main main main"
+    "sidebar content content content"
+    "footer footer footer footer";
+}
+.grid-template-areas .item-1 {
+  grid-area: nav;
+}
+.grid-template-areas .item-2 {
+  grid-area: header;
+}
+.grid-template-areas .item-3 {
+  grid-area: sidebar;
+}
+.grid-template-areas .item-4 {
+  grid-area: main;
+}
+.grid-template-areas .item-5 {
+  grid-area: content;
+}
+.grid-template-areas .item-6 {
+  grid-area: footer;
+}
+/* ------------------------------------------------ */
+
+/* Grid Template */
+.grid-template {
+  display: grid;
+  /* grid-template: "h h h" 100px "f f f" 200px / auto 150px auto; */
+  /* grid-template: "h h" 100px
+  "m m" 200px
+  "f f" 300px
+  / auto 200px; */
+  grid-template:
+    "h h h" 100px
+    "m m m" 200px
+    "f f f" 300px
+    / auto 200px 350px;
+}
+/* ------------------------------------------------ */
+
+/* Grid Gap */
+.grid-gap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr) 0.5fr;
+  grid-template-areas:
+    "header header header"
+    "nav content sidebar"
+    "nav content sidebar"
+    "nav main main"
+    "footer footer footer";
+  /* column-gap: 50px;
+  row-gap: 10px; */
+  gap: 10px 40px;
+}
+
+.grid-gap .item-1 {
+  grid-area: nav;
+}
+.grid-gap .item-2 {
+  grid-area: header;
+}
+.grid-gap .item-3 {
+  grid-area: content;
+}
+.grid-gap .item-4 {
+  grid-area: main;
+}
+.grid-gap .item-5 {
+  grid-area: sidebar;
+}
+.grid-gap .item-6 {
+  grid-area: footer;
+}
