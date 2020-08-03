@@ -223,3 +223,100 @@ span {
 .grid-gap .item-6 {
   grid-area: footer;
 }
+/* ---------------------------------------------------------- */
+
+/* Justify Items */
+.justify-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr) 0.5fr;
+  grid-template-areas:
+    "header header header"
+    "nav content sidebar"
+    "nav content sidebar"
+    "nav main main"
+    "footer footer footer";
+  gap: 50px 100px;
+  justify-items: center;
+}
+.justify-items .item-1 {
+  grid-area: nav;
+}
+.justify-items .item-2 {
+  grid-area: header;
+}
+.justify-items .item-3 {
+  grid-area: content;
+}
+.justify-items .item-4 {
+  grid-area: main;
+}
+.justify-items .item-5 {
+  grid-area: sidebar;
+}
+.justify-items .item-6 {
+  grid-area: footer;
+}
+/* ----------------------------------------------------------- */
+
+/* Align Items */
+.align-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr) 0.5fr;
+  grid-template-areas:
+    "header header header"
+    "nav content sidebar"
+    "nav content sidebar"
+    "nav main main"
+    "footer footer footer";
+  gap: 20px 35px;
+  align-items: start;
+}
+.align-items .item-1 {
+  grid-area: nav;
+}
+.align-items .item-2 {
+  grid-area: header;
+}
+.align-items .item-3 {
+  grid-area: content;
+}
+.align-items .item-4 {
+  grid-area: main;
+}
+.align-items .item-5 {
+  grid-area: sidebar;
+}
+.align-items .item-6 {
+  grid-area: footer;
+}
+/* --------------------------------------- */
+
+/* Justify Content */
+.justify-content {
+  grid-template-columns: 200px 100px 150px;
+  grid-template-rows: 100px 200px;
+  gap: 50px 50px;
+  justify-content: center;
+}
+/* ---------------------------------------------- */
+
+/* Grid Auto columns and rows */
+.grid-auto-columns-rows {
+  display: grid;
+  gap: 5px;
+  grid-template-areas: "a a a";
+  grid-auto-columns: 100px;
+  grid-auto-rows: 200px;
+}
+/* ---------------------------------------------- */
+
+/* Grid Auto Flow */
+.grid-auto-flow {
+  display: grid;
+  gap: 10px;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  /* grid-auto-flow: column; */
+  grid-auto-flow: row;
+}
